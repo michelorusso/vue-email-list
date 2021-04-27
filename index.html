@@ -23,13 +23,17 @@
 
         <div class="email">
 
-            <ul>
+            <h1>E-MAIL</h1>
 
-                <li>
-                    {{ emailArray }}
+            <ul v-if="emailArray.length == 10">
+
+                <li v-for="email in emailArray">
+                    {{ email }}
                 </li>
 
             </ul>
+
+            <div class="load" v-else="">loading...</div>
 
         </div>
 
